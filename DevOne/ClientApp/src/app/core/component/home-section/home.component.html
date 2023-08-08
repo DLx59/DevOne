@@ -1,0 +1,208 @@
+<div class="home-component">
+  <app-hero></app-hero>
+  <div class="custom-container py-lg-5 mb-7">
+    <div class="d-lg-block d-none">
+      <div class="row">
+        <div class="col-lg-7">
+          <h2 [translate]="translate.homeTurnOnVision"></h2>
+          <p [translate]="translate.homeTurnOnVisionText"></p>
+        </div>
+        <div class="offset-lg-1 col-lg-4">
+          <div class="row h-100">
+            <div class="col-6">
+              <div class="d-flex h-100">
+                <div class="m-auto">
+                  <div class="stats text-center">
+                    <span class="d-block">{{ numberOfProject }}</span>
+                    <span [translate]="translate.homeCompletedProjects" class="text-black-50"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex h-100">
+                <div class="m-auto">
+                  <div class="stats text-center">
+                    <span class="d-block">{{ satisfiedCompanies }} {{ addChar() }}</span>
+                    <span [translate]="translate.homeSatisfiedCompanies" class="text-black-50"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-lg-7">
+        <div class="col-lg-4">
+          <div class="row h-100">
+            <div class="col-6">
+              <div class="d-flex h-100">
+                <div class="m-auto">
+                  <div class="stats text-center">
+                    <span class="d-block">5 +</span>
+                    <span [translate]="translate.homeSYearsExperience" class="text-black-50"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex h-100">
+                <div class="m-auto">
+                  <div class="stats text-center">
+                    <span class="d-block">99%</span>
+                    <span [translate]="translate.homeSatisfiedCustomers" class="text-black-50"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-lg-1 col-lg-7">
+          <h2 [translate]="translate.homeExperienceExpertise"></h2>
+          <p [translate]="translate.homeExperienceExpertiseText"></p>
+        </div>
+      </div>
+    </div>
+    <div class="d-lg-none stats-mobile">
+      <div class="row">
+        <div class="col-3">
+          <div class="stats text-center">
+            <span class="d-block">{{ numberOfProject }}</span>
+            <span [translate]="translate.homeCompletedProjects" class="text-black-50"></span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="stats text-center">
+            <span class="d-block">{{ satisfiedCompanies }} {{ addChar() }}</span>
+            <span [translate]="translate.homeSatisfiedCompanies" class="text-black-50"></span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="stats text-center">
+            <span class="d-block">5 +</span>
+            <span [translate]="translate.homeSYearsExperience" class="text-black-50"></span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="stats text-center">
+            <span class="d-block">99%</span>
+            <span [translate]="translate.homeSatisfiedCustomers" class="text-black-50"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-primary py-lg-5 mt-lg-5 has-divider bottom-divider position-relative">
+    <div class="top-inside-line-divider primary"></div>
+    <div class="custom-container">
+      <div class="row text-light">
+        <div class="col-lg-6">
+          <h2 [translate]="translate.homeContactMeProject"></h2>
+          <p [translate]="translate.homeContactMeProjectText"></p>
+        </div>
+        <div class="offset-xl-3 col-xl-3 col-md-6">
+          <div class="d-flex h-100 mt-lg-2">
+            <div class="m-lg-auto">
+              <app-button [buttonClasses]="'btn btn-light'"
+                          [buttonName]="translate.contactMe"
+                          [routerLink]="'contact'"></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-inside-line-divider primary"></div>
+  </div>
+  <div class="custom-container pt-lg-7 mt-7">
+    <div class="row">
+      <div class="col-lg-5 text-lg-start text-center">
+        <img alt="" class="img-fluid" height="425" ngSrc="assets/images/DevOne_expert.svg" priority="true" width="594"/>
+      </div>
+      <div class="col-lg-7 my-3 my-lg-auto">
+        <h2>
+          {{ translate.homeExpertsPassion01 | translate }}
+          <span [translate]="translate.homeExpertsPassion02" class="text-secondary"></span>
+          {{ translate.homeExpertsPassion03 | translate }}
+        </h2>
+        <p [translateParams]="{'age': age}" [translate]="Translate.homeExpertsPassionText01" class="my-lg-4"></p>
+        <p [translate]="translate.homeExpertsPassionText02"></p>
+      </div>
+    </div>
+    <div class="row mt-lg-7">
+      <div class="col-lg-5">
+        <h2>
+          {{ translate.homeMission01 | translate }}
+          <span [translate]="translate.homeMission02" class="text-secondary"></span>
+        </h2>
+      </div>
+      <div class="col-lg-7">
+        <p [translate]="translate.homeMissionText"></p>
+      </div>
+    </div>
+    <div class="row mt-lg-5">
+      <ng-container *ngFor="let obj of workflow.obj">
+        <div class="col-lg-4">
+          <app-workflow [content]="translateDynamic[obj.content]"
+                        [imgAlt]="obj.imgAlt"
+                        [imgHeight]="obj.imgHeight"
+                        [imgSource]="obj.imgSource"
+                        [imgWidth]="obj.imgWidth"
+                        [title]="translateDynamic[obj.title]">
+
+          </app-workflow>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row my-lg-6 my-4">
+      <div class="col-lg-6">
+        <h3>
+          {{ translate.homeServicesPremium01 | translate }}
+          <span [translate]="translate.homeServicesPremium02" class="text-secondary"></span>.
+          {{ translate.homeServicesPremium03 | translate }}
+        </h3>
+      </div>
+      <div class="offset-lg-2 col-lg-4">
+        <p [translate]="translate.homeCompleteRange" class="text-grey"></p>
+        <app-button [buttonClasses]="'btn btn-outline-dark-primary'"
+                    [buttonName]="translate.homeSeePorfolio"
+                    [routerLink]="''"></app-button>
+      </div>
+    </div>
+  </div>
+  <div class="mt-lg-6 mt-5">
+    <ng-container *ngFor="let service of services.obj">
+      <app-service-block [content]="translateDynamic[service.content]"
+                         [imgAlt]="service.imgAlt"
+                         [imgHeight]="service.imgHeight"
+                         [imgSrc]="service.imgSrc"
+                         [imgWidth]="service.imgWidth"
+                         [redirectUrl]="'contact'"
+                         [title]="translateDynamic[service.title]"></app-service-block>
+    </ng-container>
+  </div>
+  <div class="custom-container mt-5">
+    <div class="title mb-5">
+      <h2 [translate]="translate.reviewsTrustedUs"></h2>
+      <p [translate]="translate.reviewsTrustedUsText"></p>
+    </div>
+    <app-reviews></app-reviews>
+  </div>
+  <div class="custom-container mt-lg-6 mt-5">
+    <div class="row mb-lg-6">
+      <div class="col-lg-5">
+        <div class="d-flex h-100">
+          <img alt="DevOne contact" class="img-fluid m-auto" height="428" ngSrc="assets/images/contact.svg"
+               priority="true"
+               width="636">
+        </div>
+      </div>
+      <div class="col-lg-7 px-lg-6 mt-5 mt-lg-auto">
+        <h2 [translate]="translate.homeTransformReality"></h2>
+        <p [translate]="translate.homeVisionOcean"></p>
+        <div class="mt-lg-5">
+          <app-contact-form [submitButtonClass]="'btn btn-dark'"></app-contact-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.translate-menu-component {
+  .select-button {
+    margin-right: .95rem;
+    padding: $btn-padding-y $btn-padding-x;
+    height: auto !important;
+    border-radius: $btn-border-radius !important;
+    transition: all .1s ease-in-out;
+    width: 12rem;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      display: inline-block;
+      margin-left: .62rem;
+      vertical-align: middle;
+
+      @include media-breakpoint-down(lg) {
+        font-size: .8rem;
+        padding: .625rem .3rem;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.cdk-overlay-backdrop {
+  transition: none !important;
+}
+
+.cdk-overlay-pane {
+  &:before {
+    @include shape_03;
+  }
+}
+
+.mat-mdc-menu-panel {
+  border-radius: 0.9375rem !important;
+  background: #FFF !important;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.10) !important;
+  width: 12rem;
+  margin-top: 1rem;
+  transform-origin: center top !important;
+}
+
+
+.mat-mdc-menu-item {
+  a {
+    margin-left: .62rem;
+  }
+}
+
+.mat-mdc-button, .mat-mdc-outlined-button {
+  --mat-mdc-button-persistent-ripple-color: rgba(0, 0, 0, 0);
+  --mat-mdc-button-ripple-color: rgba(0, 0, 0, 0);
+}

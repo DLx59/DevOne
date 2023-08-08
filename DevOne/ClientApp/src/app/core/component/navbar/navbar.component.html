@@ -1,0 +1,79 @@
+<header class="navbar-component" id="navbar-component">
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid custom-padding">
+      <a class="navbar-brand" href="#">
+        <ng-container *ngIf="!isContactRoute; else contactRoute">
+          <img alt="Logo Devone Webmaster" class="logo-image" height="49"
+               ngSrc="assets/images/DevOne_webmaster_logo.svg"
+               priority="true" width="67">
+        </ng-container>
+        <ng-template #contactRoute>
+          <img alt="Logo Devone Webmaster" class="logo-image" height="49"
+               ngSrc="assets/images/DevOne_webmaster_logo_light.svg"
+               priority="true" width="67">
+        </ng-template>
+      </a>
+      <button aria-controls="navbar-collapse" aria-expanded="false" aria-label="toggle navigation"
+              class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div #navbarCollapse class="collapse navbar-collapse justify-content-center" id="navbar-collapse">
+        <ul class="navbar-nav mt-lg-auto mt-4 top-botom-borders-in">
+          <li class="nav-item">
+            <a [routerLinkActiveOptions]="{ exact: true }"
+               [routerLinkActive]="['active']"
+               [routerLink]="'/'"
+               [translate]="translate.home"
+               aria-current="page"
+               class="nav-link"></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a aria-expanded="false" class="nav-link dropdown-toggle"
+               data-bs-toggle="dropdown" href="#" role="button">
+              {{translate.navbarServices | translate}}
+              <svg fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd"
+                      d="M3.69166 7.09334C3.7451 7.03099 3.81031 6.97978 3.88355 6.94264C3.95679 6.9055 4.03663 6.88315 4.11851 6.87688C4.20039 6.87062 4.2827 6.88055 4.36074 6.9061C4.43878 6.93166 4.51102 6.97235 4.57333 7.02584L10 11.6767L15.4267 7.02584C15.5532 6.92428 15.7142 6.8759 15.8758 6.89093C16.0373 6.90595 16.1867 6.98321 16.2923 7.10636C16.3979 7.22951 16.4515 7.38891 16.4418 7.55085C16.432 7.7128 16.3597 7.8646 16.24 7.97417L10.4067 12.9742C10.2934 13.0712 10.1492 13.1246 10 13.1246C9.85084 13.1246 9.7066 13.0712 9.59333 12.9742L3.76 7.97417C3.63432 7.86627 3.55661 7.71289 3.54396 7.54773C3.5313 7.38256 3.58473 7.21913 3.6925 7.09334H3.69166Z"
+                      fill="#333333"
+                      fill-rule="evenodd"/>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="text-start text-lg-center w-100">
+                <a [translate]="translate.navbarCreateWebsite" class="dropdown-item" href="#"></a>
+              </li>
+              <li class="text-start text-lg-center w-100">
+                <a [translate]="translate.navbarRedisignWebsite" class="dropdown-item" href="#"></a>
+              </li>
+              <li class="text-start text-lg-center w-100">
+                <a [translate]="translate.navbarPromotionalMarketing" class="dropdown-item" href="#"></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a [routerLinkActive]="['active']" [routerLink]="'/projets'" [translate]="translate.navbarProjects"
+               class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a [routerLinkActive]="['active']" [routerLink]="'contact'" [translate]="translate.navbarContact"
+               class="nav-link"></a>
+          </li>
+          <li class="nav-item d-lg-none my-4">
+            <div class="d-flex">
+              <button [routerLink]="'contact'" [translate]="translate.navbarAskQuote"
+                      class="btn btn-secondary custom-button me-auto"></button>
+              <app-translate-menu [calledFrom]="'navbar'"></app-translate-menu>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-none d-lg-flex">
+        <div class="m-auto">
+          <app-translate-menu [calledFrom]="'navbar'"></app-translate-menu>
+        </div>
+        <button [routerLink]="'contact'" [translate]="translate.navbarAskQuote" class="btn btn-secondary"></button>
+      </div>
+    </div>
+  </nav>
+</header>

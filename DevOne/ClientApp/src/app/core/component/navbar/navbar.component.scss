@@ -1,0 +1,142 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.navbar-component {
+  position: absolute;
+  height: $navbar-height-collapse-close;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  nav.navbar {
+    .custom-padding {
+      padding: 1.80rem $container-padding-x;
+
+      @include media-breakpoint-down(lg) {
+        padding: 1.80rem 4rem;
+      }
+    }
+
+    .navbar-collapse {
+      @include media-breakpoint-down(lg) {
+        margin-top: 1.5rem;
+
+        &.collapsing {
+          @include collapse-config;
+        }
+
+        &.collapse {
+          &.show {
+            @include collapse-config;
+          }
+        }
+      }
+
+      .navbar-nav {
+        &.top-botom-borders-in {
+          position: relative;
+
+          .nav-item {
+            .nav-link, .dropdown-item {
+              position: relative;
+              padding: .625rem;
+
+              &.dropdown-toggle {
+                &:after {
+                  border: none;
+                  margin-left: 0;
+                }
+              }
+
+              &:before, &:after {
+                position: absolute;
+                content: "";
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $secondary;
+                opacity: 0;
+                transition: all 0.3s;
+              }
+
+              &:before {
+                top: 0;
+                transform: translateY(-10px);
+              }
+
+              &:after {
+                bottom: 0;
+                transform: translateY(10px);
+              }
+
+              &:hover:before, &:hover:after {
+                opacity: 1;
+                transform: translateY(0px);
+
+                @include media-breakpoint-down(lg) {
+                  opacity: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .nav-item {
+          margin-right: .75rem;
+
+          a {
+            color: $dark-grey;
+            text-transform: uppercase;
+
+            &.active {
+              font-family: 'Kanit-Bold', sans-serif;
+              color: $secondary;
+            }
+          }
+
+          .dropdown-menu {
+            &.show {
+              background-color: rgba(255, 255, 255, .90);
+              box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .25);
+              border: none;
+
+              @include media-breakpoint-down(lg) {
+                box-shadow: none;
+                background-color: transparent;
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+                &:hover {
+                  a {
+                    background-color: transparent;
+                  }
+                }
+              }
+
+              li {
+                margin-top: .625rem;
+                margin-bottom: .625rem;
+
+                .dropdown-item {
+                  &:active {
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+
+          .custom-button {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,21 @@
+<div class="custom-container">
+  <div class="row">
+    <div class="col-lg-7 order-last order-lg-first">
+      <div class="d-flex h-100">
+        <div class="my-auto text-center text-lg-start">
+          <h3 [translate]="title"></h3>
+          <p [translate]="content" class="text-grey"></p>
+          <button [routerLink]="redirectUrl" [translate]="translate.generalMoreDetails" class="btn btn-secondary"></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 order-first order-lg-last">
+      <div class="d-flex h-100">
+        <img [alt]="imgAlt" [height]="imgHeight" [ngSrc]="imgSrc"
+             [priority]="priority" [width]="imgWidth" class="img-fluid m-auto">
+        <img alt="DevOne flèche" class="arrow m-auto d-lg-block d-none" height="25" ngSrc="assets/images/arrow_dark.svg"
+             width="24">
+      </div>
+    </div>
+  </div>
+</div>

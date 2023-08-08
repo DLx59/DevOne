@@ -1,0 +1,26 @@
+<div class="hero-component py-lg-6">
+  <div class="custom-container pt-8">
+    <div class="row">
+      <div class="col-lg-8 text-start">
+        <h1>
+          {{ translate.heroh101 | translate }}
+          <span [translate]="translate.heroh102" class="text-secondary"></span>
+          {{ translate.heroh103 | translate }}
+          <span [translate]="translate.heroh104" class="text-secondary"></span>
+          {{ translate.heroh105 | translate }}
+        </h1>
+      </div>
+      <div class="col-lg-4 mb-lg-0 mb-4">
+        <p [translate]="translate.heroContact01" class="mb-0"></p>
+        <p [translate]="translate.heroContact02"></p>
+        <app-button [buttonClasses]="'btn btn-secondary'"
+                    [buttonName]="translate.contactMe"
+                    [isWhiteArrow]="true"
+                    [routerLink]="'contact'"></app-button>
+      </div>
+    </div>
+    <div class="hero-banner position-relative mt-lg-7"></div>
+  </div>
+  <div class="shape_01"></div>
+  <div class="shape_02"></div>
+</div>

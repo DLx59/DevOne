@@ -1,0 +1,21 @@
+<div class="service-block-component">
+  <div (click)="goto(redirectUrl)" class="d-none d-lg-block">
+    <app-service-block-details [content]="content"
+                               [imgAlt]="imgAlt"
+                               [imgHeight]="imgHeight"
+                               [imgSrc]="imgSrc"
+                               [imgWidth]="imgWidth"
+                               [redirectUrl]="redirectUrl"
+                               [title]="title"></app-service-block-details>
+  </div>
+
+  <div class="d-lg-none">
+    <app-service-block-details [content]="content"
+                               [imgAlt]="imgAlt"
+                               [imgHeight]="imgHeight"
+                               [imgSrc]="imgSrc"
+                               [imgWidth]="imgWidth"
+                               [redirectUrl]="redirectUrl"
+                               [title]="title"></app-service-block-details>
+  </div>
+</div>

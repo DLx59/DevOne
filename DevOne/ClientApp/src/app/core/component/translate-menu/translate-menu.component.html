@@ -1,0 +1,28 @@
+<div class="translate-menu-component">
+  <button (click)="addId(calledFrom)" [matMenuTriggerFor]="languageMenu" class="select-button" mat-button type="button">
+          <span class="mat-button-wrapper">
+            <ng-container *ngIf="currentLang == 'fr'; else english">
+            <img alt="DevOne drapeau Français" height="24" ngSrc="assets/images/french_flag.svg" width="32">
+            </ng-container>
+            <ng-template #english>
+              <img alt="DevOne drapeau Anglais" height="24" ngSrc="assets/images/english_flag.svg" width="32">
+            </ng-template>
+            <a [translate]="currentLang == 'fr' ? translate.french : translate.english" aria-labelledby="lang"></a>
+            <mat-icon aria-hidden="true" role="img">expand_more</mat-icon>
+          </span>
+  </button>
+  <mat-menu #languageMenu>
+    <button (click)="changeCurrentLang('fr')" mat-menu-item role="menuitem">
+            <span class="mat-button-wrapper">
+              <img alt="DevOne drapeau Français" height="24" ngSrc="assets/images/french_flag.svg" width="32">
+              <a aria-labelledby="lang">Français</a>
+          </span>
+    </button>
+    <button (click)="changeCurrentLang('en')" mat-menu-item role="menuitem">
+            <span class="mat-button-wrapper">
+              <img alt="DevOne drapeau Anglais" height="24" ngSrc="assets/images/english_flag.svg" width="32">
+              <a aria-labelledby="lang">English</a>
+          </span>
+    </button>
+  </mat-menu>
+</div>

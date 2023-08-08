@@ -1,0 +1,17 @@
+<div class="contact-information-component">
+  <span [translate]="translate.footerPhoneSupport" class="category d-block text-uppercase mb-3 mb-lg-1"></span>
+  <a href="tel:+33647109737" role="link">
+    <mat-icon>phone</mat-icon>
+    +33 647 10 97 37</a>
+  <span class="d-block"><mat-icon>schedule</mat-icon>
+    {{ translate.footerSchedule | translate }}</span>
+
+  <span [translate]="translate.footerEmail" class="category d-block text-uppercase mb-3 mb-lg-1"></span>
+  <a [routerLink]="'/contact'">
+    <mat-icon>mail</mat-icon>
+    {{ translate.footerEmailText | translate }}</a>
+
+  <span [translate]="translate.footerAddress" class="category d-block text-uppercase mb-3 mb-lg-1"></span>
+  <span><mat-icon>location_on</mat-icon>
+    {{ translate.footerAddress01 | translate }}<br>{{ translate.footerAddress02 | translate }}</span>
+</div>

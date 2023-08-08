@@ -1,0 +1,88 @@
+@import "bootstrap/scss/mixins/breakpoints";
+
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.custom-container {
+  @include make-container();
+
+  @include media-breakpoint-down(lg) {
+    padding: 1.80rem 4rem;
+  }
+}
+
+@mixin shape_01 {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7.56rem;
+  background-image: url('../assets/images/ellipse_shape_01.svg');
+  background-position-x: left;
+  background-position-y: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 15.625rem;
+  height: 15.625rem;
+  z-index: -1;
+}
+
+@mixin shape_02 {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -8rem;
+  background-image: url('../assets/images/ellipse_shape_02.svg');
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 15.625rem;
+  height: 15.625rem;
+  z-index: -1;
+}
+
+
+@mixin shape_03 {
+  content: "";
+  position: absolute;
+  left: 16%;
+  top: -4px;
+  background-image: url('../assets/images/polygone_shape.svg');
+  width: 1.75rem;
+  height: 1.44rem;
+  z-index: -1;
+  filter: drop-shadow(0px -9px 20px rgba(0, 0, 0, 0.10));
+
+  @include media-breakpoint-down(lg) {
+    left: 28%;
+  }
+}
+
+
+@mixin shape_04 {
+  content: "";
+  position: absolute;
+  left: 26%;
+  bottom: -4px;
+  top: inherit !important;
+  background-image: url('../assets/images/polygone_shape_revert.svg');
+  width: 1.75rem;
+  height: 1.44rem;
+  z-index: -1;
+  filter: drop-shadow(0px -9px 20px rgba(0, 0, 0, 0.10));
+
+  @include media-breakpoint-down(lg) {
+    left: 16%;
+  }
+}
+
+@mixin collapse-config {
+  padding: .625rem;
+  background-color: rgba(255, 255, 255, .95);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .25);
+}

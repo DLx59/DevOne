@@ -1,0 +1,77 @@
+<div [ngClass]="{'h-100' : isSubmit && !isSend}" class="contact-form-component">
+  <form (ngSubmit)="onSubmit()" *ngIf="!isSend && !isSubmit; else sended" [formGroup]="formGroup">
+    <div class="row">
+      <mat-form-field [class]="!isPhoneFormContact ? 'col-lg-6' : 'col-12'"
+                      [ngClass]="{'mb-3 mb-lg-auto' : addErrorMargin(name)}">
+        <mat-label [translate]="translate.contactFormName"></mat-label>
+        <input [formControlName]="'name'"
+               matInput
+               type="text">
+        <mat-error *ngIf="name.invalid">{{getErrorMessage(name)}}</mat-error>
+      </mat-form-field>
+      <mat-form-field [class]="!isPhoneFormContact ? 'col-lg-6' : 'col-12'"
+                      [ngClass]="{'mb-5 mb-lg-auto' : addErrorMargin(phoneNumber)}">
+        <mat-label [translate]="translate.contactFormPhone"></mat-label>
+        <input [formControlName]="'phoneNumber'"
+               matInput
+               type="text">
+        <mat-error *ngIf="phoneNumber.invalid">
+          {{getErrorMessage(phoneNumber, 'phone')}}<br>Ex. : +32 X XX XX XX XX
+        </mat-error>
+      </mat-form-field>
+      <ng-container *ngIf="!isPhoneFormContact">
+        <mat-form-field>
+          <mat-label [ngClass]="{'mb-3 mb-lg-auto' : addErrorMargin(mail)}"
+                     [translate]="translate.contactFormMail"></mat-label>
+          <input [formControlName]="'mail'"
+                 matInput
+                 placeholder="mail@example.com"
+                 type="email">
+          <mat-error *ngIf="mail.invalid">{{getErrorMessage(mail, 'mail')}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label [translate]="translate.contactFormWebsite"></mat-label>
+          <input [formControlName]="'website'"
+                 matInput
+                 type="text">
+        </mat-form-field>
+        <mat-form-field [ngClass]="{'mb-3 mb-lg-auto' : addErrorMargin(content)}">
+          <mat-label [translate]="translate.contactFormRequest"></mat-label>
+          <textarea [formControlName]="'content'"
+                    matInput
+                    rows="5"
+                    type="text">
+        </textarea>
+          <mat-error *ngIf="content.invalid">{{getErrorMessage(content)}}</mat-error>
+        </mat-form-field>
+      </ng-container>
+      <mat-checkbox [disableRipple]="true"
+                    [formControlName]="'submitCase'"
+                    [translate]="translate.contactFormRGPD"
+                    class="my-3">
+        <label [translate]="!isPhoneFormContact ? translate.contactFormRGPD : translate.contactFormPhoneRGPD"></label>
+        <mat-error *ngIf="submitCase.invalid">{{getErrorMessage(submitCase, 'checkbox')}}</mat-error>
+      </mat-checkbox>
+      <div [class]="{'text-center': isPhoneFormContact}">
+        <button [disabled]="formGroup.invalid"
+                [ngClass]="[submitButtonClass]"
+                [translate]="translate.contactFormSendMessage"
+                class="my-4"
+                type="submit"></button>
+      </div>
+    </div>
+  </form>
+  <ng-template #sended>
+    <div>
+      <span (click)="resetIsSend()"
+            [ngClass]="[isSucess ? 'text-sucess' : 'text-danger']"
+            class="text-success">{{ resultMessage }}</span>
+    </div>
+  </ng-template>
+
+  <div class="d-flex h-100 text-center my-4">
+    <div class="m-auto">
+      <app-spinner *ngIf="isSubmit && !isSend" [loadingText]="translate.contactFormSendInProgress"></app-spinner>
+    </div>
+  </div>
+</div>

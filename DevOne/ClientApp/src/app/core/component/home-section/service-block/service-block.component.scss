@@ -1,0 +1,23 @@
+@import "../../../../../styles/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.service-block-component {
+  p {
+    font-size: 1.375rem;
+  }
+
+  img {
+    transition: transform 0.2s ease-in-out !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($grey, 0.2);
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

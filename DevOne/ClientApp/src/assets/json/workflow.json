@@ -1,0 +1,28 @@
+{
+  "obj": [
+    {
+      "content": "homePreliminaryStudyText",
+      "imgAlt": "DevOne étude préalable",
+      "imgHeight": "200",
+      "imgSource": "assets/images/preliminary-study.svg",
+      "imgWidth": "200",
+      "title": "homePreliminaryStudy"
+    },
+    {
+      "content": "homeRecommendationsText",
+      "imgAlt": "DevOne recommandations",
+      "imgHeight": "200",
+      "imgSource": "assets/images/recommendations.svg",
+      "imgWidth": "200",
+      "title": "homeRecommendations"
+    },
+    {
+      "content": "homeApplicationText",
+      "imgAlt": "DevOne mise en application",
+      "imgHeight": "200",
+      "imgSource": "assets/images/applications.svg",
+      "imgWidth": "200",
+      "title": "homeApplication"
+    }
+  ]
+}

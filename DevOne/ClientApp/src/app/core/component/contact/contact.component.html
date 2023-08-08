@@ -1,0 +1,45 @@
+<div class="contact-component">
+  <div class="contact-background">
+    <div class="custom-container contact-hero">
+      <div class="row">
+        <div class="col-5">
+          <div class="d-flex">
+            <h1 [translate]="translate.contactInformation" class="m-auto"></h1>
+          </div>
+        </div>
+        <div class="col-5 offset-1">
+          <div class="d-flex">
+            <p [translate]="translate.contactInformationText" class="m-auto"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="custom-container">
+    <div class="row text-center text-lg-start">
+      <div class="col-lg-6">
+        <app-contact-form [submitButtonClass]="'btn btn-light'"></app-contact-form>
+      </div>
+      <div class="col-lg-6 py-lg-0 pt-5 pb-4">
+        <h2 [translate]="translate.contactMoreInfo"></h2>
+        <p [translate]="translate.contactMoreInfoText"></p>
+        <app-contact-information></app-contact-information>
+        <div class="mt-4">
+          <app-social-network></app-social-network>
+        </div>
+      </div>
+    </div>
+    <div class="row phone-contact text-center py-lg-6 pt-6 pb-4">
+      <div class="offset-lg-2 col-lg-8">
+        <h2 [translate]="translate.contactFormCalledBack"></h2>
+        <p [translate]="translate.contactFormCalledBackText"></p>
+        <div class="d-flex">
+          <div class="contact-form m-auto">
+            <app-contact-form [isPhoneFormContact]="true" [submitButtonClass]="'btn btn-light'"></app-contact-form>
+          </div>
+        </div>
+        <span [translate]="translate.contactFormSummary"></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<button (mouseenter)="isHovered = true" (mouseleave)="isHovered = false"
+        [classList]="buttonClasses" [routerLink]="routerLink"
+        type="button">
+  {{ buttonName | translate }}
+  <ng-container *ngIf="!isWhiteArrow else white">
+    <ng-container *ngIf="!isHovered else secondary">
+      <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_dark.svg" width="24"/>
+    </ng-container>
+    <ng-template #secondary>
+      <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_white.svg" width="24"/>
+    </ng-template>
+  </ng-container>
+
+  <ng-template #white>
+    <ng-container *ngIf="!isHovered else secondary">
+      <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_white.svg" width="24"/>
+    </ng-container>
+    <ng-template #secondary>
+      <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_secondary.svg" width="24"/>
+    </ng-template>
+  </ng-template>
+</button>

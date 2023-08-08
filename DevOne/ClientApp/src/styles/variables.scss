@@ -1,0 +1,74 @@
+$primary: #093F4D;
+$secondary: #368ECD;
+$light: #fcfcfc;
+$dark-grey: #333;
+$grey: #7e7e7e;
+$dark-primary: #263238;
+$header-bg: rgba(9, 63, 77, 0.05);
+$navbar-height-collapse-close : 133px;
+$navbar-height-collapse-open : 486px;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  'grey': $grey,
+  'dark-primary': $dark-primary
+);
+
+$body-bg: $light;
+$font-family-base: Kanit-Regular, sans-serif;
+$container-padding-x: 6.25rem;
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 8.5,
+);
+
+$btn-font-family: Kanit-Light, sans-serif;
+$btn-font-size: 1.25rem;
+$btn-focus-box-shadow: none;
+$btn-line-height: 1.675rem;
+$btn-border-width: .063rem;
+$btn-padding-x: 1rem;
+$btn-padding-y: .625rem;
+$btn-border-radius: 1.875rem;
+$btn-color: $light;
+$btn-transition: color 300ms ease 0ms, background-color 300ms ease 0ms;
+
+$input-bg: #eeeeee;
+$input-placeholder-color: #999999;
+$input-border-radius: 4px !important;
+$input-padding-x: 16px;
+$input-padding-y: 8px;
+$input-border-width: 1px;
+$input-border-color: #bbbbbb;
+//$input-color: $primary-dark;
+$input-font-family: Kanit-Regular, sans-serif;
+$input-height: 40px;
+
+$carousel-control-color: $primary;
+$carousel-indicator-active-bg: $primary;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+$carousel-control-width: 5%;
+
+$form-check-input-border-radius: 2px;
+
+$link-decoration: none;
+$link-color: $secondary;
+
+$navbar-toggler-focus-width: 0;
+$navbar-nav-link-padding-x: 1.15rem;
+$nav-link-font-size: 1.25rem;

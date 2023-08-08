@@ -1,0 +1,66 @@
+@import "../../../../styles/variables";
+
+$dark-opacity: rgba(0, 0, 0, 0.6);
+
+.contact-form-component {
+  .text-success {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.mat-mdc-form-field {
+  .mdc-text-field {
+    padding: 0;
+
+    .mdc-text-field__input {
+      caret-color: inherit;
+    }
+  }
+
+  .mdc-text-field--filled {
+    &:not(.mdc-text-field--disabled) {
+      background-color: transparent;
+    }
+
+    .mdc-line-ripple::after {
+      color: $dark-opacity;
+      border-bottom-color: $dark;
+      border: none;
+    }
+  }
+
+  .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: $dark-opacity;
+  }
+
+  .mat-mdc-form-field-focus-overlay {
+    background-color: transparent;
+  }
+}
+
+.mat-mdc-form-field-error-wrapper {
+  padding: 0 !important;
+}
+
+.mdc-checkbox {
+  & .mdc-checkbox__native-control:enabled:focus:checked ~ .mdc-checkbox__background,
+  & .mdc-checkbox__native-control:enabled:focus:indeterminate ~ .mdc-checkbox__background {
+    border-color: $dark !important;
+    background-color: $dark !important;
+  }
+
+  & .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+  & .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background,
+  & .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+    border-color: $dark-opacity !important;
+    background-color: $dark-opacity !important;
+  }
+
+  & .mdc-checkbox__native-control:focus:checked ~ .mdc-checkbox__ripple {
+    opacity: 0 !important;
+    background-color: transparent !important;
+  }
+}

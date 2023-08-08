@@ -1,0 +1,106 @@
+<footer class="footer-component">
+  <div class="custom-container text-center text-md-start py-md-3">
+    <ng-container *ngIf="!isMinimize; else minimize">
+      <div class="row pt-5 pb-2">
+        <div class="col-lg-2 col-md-3">
+          <img alt="Logo Devone Webmaster Light" class="img-fluid mb-lg-4 mb-3" height="75"
+               ngSrc="assets/images/DevOne_webmaster_logo_light.svg" priority="true" width="106">
+          <span [translate]="translate.footerIndependent" class="d-block d-lg-inline"></span>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4">
+          <h3>
+            {{ translate.footerQuickLinks | translate }}
+            <img alt="ligne DevOne" class="img-fluid d-none d-lg-inline-block" height="1"
+                 ngSrc="assets/images/line_shape.svg"
+                 priority="false" width="48">
+          </h3>
+          <ul class="list-unstyled" role="list">
+            <li>
+              <a [routerLink]="''" [translate]="translate.home"></a>
+            </li>
+            <li>
+              <a [routerLink]="''" [translate]="translate.footerServices"></a>
+            </li>
+            <li>
+              <a [routerLink]="''" [translate]="translate.footerPortfolio"></a>
+            </li>
+            <li>
+              <a [routerLink]="''" [translate]="translate.footerContactUs"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-5 mb-4">
+          <h3>
+            {{ translate.footerContactUs | translate }}
+            <img alt="ligne DevOne" class="img-fluid d-none d-lg-inline-block" height="1"
+                 ngSrc="assets/images/line_shape.svg"
+                 priority="false" width="48">
+          </h3>
+          <app-contact-information></app-contact-information>
+        </div>
+        <div class="col-lg-3 d-lg-block d-none">
+          <h3>
+            {{ translate.footerFollowUs | translate }}
+            <img alt="ligne DevOne" class="img-fluid d-none d-lg-inline-block" height="1"
+                 ngSrc="assets/images/line_shape.svg"
+                 priority="false" width="48">
+          </h3>
+          <div class="category">
+            <app-social-network></app-social-network>
+          </div>
+        </div>
+      </div>
+      <div class="d-block d-lg-none text-center mb-5">
+        <span [translate]="translate.footerFollowUsSocial" class="d-block category mb-4 text-uppercase"></span>
+        <app-social-network></app-social-network>
+      </div>
+      <div class="row mt-lg-6">
+        <div class="col-lg-2">
+          <div class="d-flex h-100">
+            <div class="my-auto mx-auto mx-lg-0">
+              <span>&copy; {{currentYear}} DEVONE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="d-flex h-100">
+            <div class="m-sm-auto">
+            <span>
+              <a [routerLink]="''" [translate]="translate.footerPrivacy" role="link"></a> | <a
+              [routerLink]="''" [translate]="translate.footerTerms" role="link"></a>
+            </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mt-lg-auto mt-4">
+          <div class="d-flex">
+            <div class="my-auto mx-auto my-lg-0 mx-lg-0 ms-lg-auto">
+              <app-translate-menu [calledFrom]="'footer'"></app-translate-menu>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #minimize>
+      <div class="row py-4">
+        <div class="col-lg-4">
+          <div class="d-flex h-100">
+            <div class="me-lg-auto custom-align">
+              <span>&copy; {{currentYear}} DEVONE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 mt-lg-auto mt-3">
+          <div class="d-flex h-100">
+            <div class="ms-lg-auto custom-align">
+            <span>
+              <a [routerLink]="''" [translate]="translate.footerPrivacy" role="link"></a> | <a
+              [routerLink]="''" [translate]="translate.footerTerms" role="link"></a>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</footer>

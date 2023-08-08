@@ -1,0 +1,131 @@
+@import "../../../../styles/variables";
+
+.navbar-component {
+  &.contact {
+    @include media-breakpoint-up(lg) {
+      .nav-item {
+        a {
+          color: $light !important;
+
+          svg {
+            path {
+              fill: white !important;
+            }
+          }
+        }
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          color: $dark-grey !important;
+        }
+      }
+
+      .translate-menu-component {
+        a, .mat-icon {
+          color: $light !important;
+        }
+
+        .select-button {
+          &:hover {
+            a, .mat-icon {
+              color: rgba(252, 252, 252, 0.82) !important;
+            }
+
+            background-color: rgba(255, 255, 255, 0.35) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-component {
+  position: relative;
+  background-color: $primary;
+  color: $light;
+
+  .contact-background {
+    position: relative;
+    background: lightgray url("../../../../assets/images/DevOne_contact_bg.svg") center/cover no-repeat;
+    height: 49.75em;
+    width: auto;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(9, 63, 77, 0.29) 0%, #093F4D 100%);
+      z-index: 1;
+    }
+
+    .contact-hero {
+      position: relative;
+      height: 100%;
+      z-index: 2;
+
+      & {
+        &,
+        & > .row,
+        & > .row > [class^="col-"],
+        & > .row > [class^="col-"] > div {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+
+    .mdc-text-field:not(.mdc-text-field--disabled) {
+      .mdc-text-field__input {
+        color: $light;
+      }
+
+      .mdc-floating-label {
+        color: $light;
+      }
+
+      &.mdc-text-field--filled {
+        .mdc-line-ripple::before {
+          border-bottom-color: $light;
+        }
+      }
+    }
+
+    .mat-mdc-checkbox {
+      .mdc-form-field {
+        color: $light;
+      }
+
+      .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+      .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background,
+      .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+        border-color: $light !important;
+        background-color: transparent !important;
+      }
+
+      .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true]) ~ .mdc-checkbox__background {
+        border-color: $light !important;
+      }
+    }
+  }
+
+  .phone-contact {
+    .contact-form {
+      @include media-breakpoint-up(md) {
+        width: 75%;
+      }
+
+      form {
+        background: transparent;
+        text-align: initial;
+      }
+    }
+  }
+}

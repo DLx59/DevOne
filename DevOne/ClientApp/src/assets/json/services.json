@@ -1,0 +1,34 @@
+{
+  "obj": [
+    {
+      "content": "homeWebsiteCreationText",
+      "imgAlt": "DevOne création de site internet, Belgique, Mouscron",
+      "imgHeight": "204",
+      "imgSrc": "assets/images/website_creation.svg",
+      "imgWidth": "204",
+      "priority" : false,
+      "routerLink": "",
+      "title": "homeWebsiteCreation"
+    },
+    {
+      "content": "homeRedesignWebsiteText",
+      "imgAlt": "DevOne refonte de site internet, Belgique, Dottigines",
+      "imgHeight": "256",
+      "imgSrc": "assets/images/redesign_website.svg",
+      "imgWidth": "256",
+      "priority" : false,
+      "routerLink": "",
+      "title": "homeRedesignWebsite"
+    },
+    {
+      "content": "homePromotionnalMarketingText",
+      "imgAlt": "DevOne impression publicitaire multi-support ",
+      "imgHeight": "150",
+      "imgSrc": "assets/images/promotional_marketing.svg",
+      "imgWidth": "254",
+      "priority" : true,
+      "routerLink": "",
+      "title": "homePromotionnalMarketing"
+    }
+  ]
+}

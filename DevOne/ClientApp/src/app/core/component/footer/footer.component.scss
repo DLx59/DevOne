@@ -1,0 +1,67 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+$margin-top: 1.56rem;
+
+footer.footer-component {
+  font-family: Kanit-Light, sans-serif;
+  background-color: $primary;
+  color: $light;
+
+  mat-icon {
+    color: $light
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .list-unstyled {
+    li {
+      margin-bottom: .62rem;
+
+      &:first-of-type {
+        margin-top: $margin-top;
+      }
+    }
+  }
+
+  .category {
+    font-family: Kanit-SemiBold, sans-serif;
+    margin-top: $margin-top;
+  }
+
+  a {
+    &:hover {
+      color: rgba(54, 141, 203, .5);
+    }
+  }
+
+
+
+  .mat-button-wrapper {
+    color: $light
+  }
+
+  .custom-align {
+    @include media-breakpoint-down(lg) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.cdk-overlay-container {
+  &#footer {
+    .cdk-overlay-pane {
+      &:before {
+        @include shape_04;
+      }
+    }
+
+    .mat-mdc-menu-panel {
+      margin-top: 0 !important;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="row">
+  <ng-container *ngFor="let r of reviews| paginate: config; index as index">
+    <div class="col-lg-4">
+      <div class="review">
+        <img [ngSrc]="r.profile_photo_url" alt="Avis DevOne Mouscron" height="90" width="90">
+        <div class="mt-3">
+          <ng-container *ngFor="let s of [].constructor(5); index as index">
+            <span [ngClass]="{'filled': index < r.rating}" class="rating-stars filled"></span>
+          </ng-container>
+        </div>
+        <p class="content">"{{r.text}}"</p>
+        <p class="author">{{r.author_name}}</p>
+        <p class="client text-grey">Client</p>
+      </div>
+    </div>
+  </ng-container>
+  <div class="pagination-control text-center">
+    <pagination-controls (pageChange)="onPageChange($event)"
+                         [autoHide]="false"
+                         [id]="config.id!"
+                         [maxSize]="1"
+                         [nextLabel]="labels.nextLabel"
+                         [previousLabel]="labels.previousLabel"></pagination-controls>
+  </div>
+</div>

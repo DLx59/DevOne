@@ -1,0 +1,14 @@
+@import "../styles/variables";
+
+.app-content {
+  margin-top: 0;
+  padding-top: 0;
+  transition: margin-top 1s ease;
+}
+
+.navbar-open {
+  &.app-content {
+    margin-top: $navbar-height-collapse-open;
+  }
+}
+

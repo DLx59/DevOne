@@ -1,0 +1,12 @@
+<div class="reviews-component py-lg-5">
+  <ng-container *ngIf="reviews.length > 0; else loading">
+    <app-pagination [reviews]="reviews" [config]="config"></app-pagination>
+  </ng-container>
+  <ng-template #loading>
+    <div class="text-center">
+      <app-spinner (isDestroy)="getSpinnerDestroyEvent($event)"
+                   [loadingText]="translate.reviewsLoading"></app-spinner>
+    </div>
+  </ng-template>
+  <div id="googleMapScript"></div>
+</div>

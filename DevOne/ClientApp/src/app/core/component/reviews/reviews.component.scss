@@ -1,0 +1,44 @@
+@import "../../../../styles/variables";
+
+.reviews-component {
+
+  .pagination-control {
+    margin-top: 3.56rem;
+  }
+
+  .review {
+    background-color: rgba(9, 63, 77, 0.08);
+    padding: 3rem 1.56rem;
+
+    .rating-stars {
+      display: inline-block;
+      position: relative;
+      font-size: 24px;
+      line-height: 0;
+      color: #fac917;
+
+      &:after {
+        content: '\2606';
+      }
+
+      &.filled:after {
+        content: '\2605';
+      }
+    }
+
+    .content {
+      margin-top: 1.38rem;
+    }
+
+    .author {
+      margin-top: 1.69rem;
+      margin-bottom: 0;
+      font-family: Kanit-SemiBold, sans-serif;
+      font-size: 1.25rem;
+    }
+
+    .client {
+      font-size: 1rem;
+    }
+  }
+}
