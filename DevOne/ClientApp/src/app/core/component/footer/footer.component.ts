@@ -10,7 +10,7 @@ import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 })
 export class FooterComponent {
   public currentYear: number;
-  public translate = Translate;
+  protected readonly translate = Translate;
   public isMinimize: boolean = false;
   public isDelayFinish: boolean = false;
 

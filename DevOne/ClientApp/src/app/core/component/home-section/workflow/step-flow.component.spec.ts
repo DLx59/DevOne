@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkflowComponent } from './workflow.component';
+import { StepFlowComponent } from './step-flow.component';
 
 describe('WorkflowComponent', () => {
-  let component: WorkflowComponent;
-  let fixture: ComponentFixture<WorkflowComponent>;
+  let component: StepFlowComponent;
+  let fixture: ComponentFixture<StepFlowComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WorkflowComponent]
+      declarations: [StepFlowComponent]
     });
-    fixture = TestBed.createComponent(WorkflowComponent);
+    fixture = TestBed.createComponent(StepFlowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

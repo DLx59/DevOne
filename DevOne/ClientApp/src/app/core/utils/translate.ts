@@ -97,4 +97,25 @@ export class Translate {
   public static contactFormCalledBack = 'contact.need-called-back';
   public static contactFormCalledBackText = 'contact.need-called-backt-text';
   public static contactFormSummary = 'contact.summary';
+  public static websiteCreationBenefits01Description = 'services.website-creation.benefits-01-description'; // dynamic
+  public static websiteCreationBenefits01Title = 'services.website-creation.benefits-01-title'; // dynamic
+  public static websiteCreationBenefits02Description = 'services.website-creation.benefits-02-description'; // dynamic
+  public static websiteCreationBenefits02Title = 'services.website-creation.benefits-02-title'; // dynamic
+  public static websiteCreationBenefits03Description = 'services.website-creation.benefits-03-description'; // dynamic
+  public static websiteCreationBenefits03Title = 'services.website-creation.benefits-03-title'; // dynamic
+  public static websiteCreationBenefitsTitle = 'services.website-creation.benefits-title';
+  public static websiteCreationCatalogDescription = 'services.website-creation.catalog-description';
+  public static websiteCreationCatalogTitle = 'services.website-creation.catalog-title';
+  public static websiteCreationTogetherDescription = 'services.website-creation.contact-together-description';
+  public static websiteCreationTogetherTitle = 'services.website-creation.contact-together-title';
+  public static websiteCreationDevelopActivity = 'services.website-creation.develop-activity';
+  public static websiteCreationECommerceDescription = 'services.website-creation.e-commerce-description';
+  public static websiteCreationECommerceTitle01 = 'services.website-creation.e-commerce-title-01';
+  public static websiteCreationECommerceTitle02 = 'services.website-creation.e-commerce-title-02';
+  public static websiteCreationShineDescription = 'services.website-creation.shine-description';
+  public static websiteCreationShineTitle = 'services.website-creation.shine-title';
+  public static websiteCreationShowcaseDescription = 'services.website-creation.showcase-description';
+  public static websiteCreationShowcaseTitle01 = 'services.website-creation.showcase-title-01';
+  public static websiteCreationShowcaseTitle02 = 'services.website-creation.showcase-title-02';
+  public static websiteCreationShowcaseTitle03 = 'services.website-creation.showcase-title-03';
 }

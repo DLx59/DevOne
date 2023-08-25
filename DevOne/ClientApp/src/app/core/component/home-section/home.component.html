@@ -105,7 +105,7 @@
             <div class="m-lg-auto">
               <app-button [buttonClasses]="'btn btn-light'"
                           [buttonName]="translate.contactMe"
-                          [routerLink]="'contact'"></app-button>
+                          [routerLink]="'/contact'"></app-button>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
           <span [translate]="translate.homeExpertsPassion02" class="text-secondary"></span>
           {{ translate.homeExpertsPassion03 | translate }}
         </h2>
-        <p [translateParams]="{'age': age}" [translate]="Translate.homeExpertsPassionText01" class="my-lg-4"></p>
+        <p [translateParams]="{'age': age}" [translate]="translate.homeExpertsPassionText01" class="my-lg-4"></p>
         <p [translate]="translate.homeExpertsPassionText02"></p>
       </div>
     </div>
@@ -142,14 +142,14 @@
     <div class="row mt-lg-5">
       <ng-container *ngFor="let obj of workflow.obj">
         <div class="col-lg-4">
-          <app-workflow [content]="translateDynamic[obj.content]"
+          <app-stepflow [content]="translateDynamic[obj.content]"
                         [imgAlt]="obj.imgAlt"
                         [imgHeight]="obj.imgHeight"
                         [imgSource]="obj.imgSource"
                         [imgWidth]="obj.imgWidth"
                         [title]="translateDynamic[obj.title]">
 
-          </app-workflow>
+          </app-stepflow>
         </div>
       </ng-container>
     </div>
@@ -176,7 +176,7 @@
                          [imgHeight]="service.imgHeight"
                          [imgSrc]="service.imgSrc"
                          [imgWidth]="service.imgWidth"
-                         [redirectUrl]="'contact'"
+                         [redirectUrl]="'/'"
                          [title]="translateDynamic[service.title]"></app-service-block>
     </ng-container>
   </div>

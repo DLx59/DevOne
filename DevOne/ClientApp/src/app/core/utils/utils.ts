@@ -23,4 +23,8 @@ export class Utils {
 
     return age;
   }
+
+  public static removeSlashRoute(route: string) {
+    return route.split('/')[1];
+  }
 }

@@ -16,7 +16,12 @@
       <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_white.svg" width="24"/>
     </ng-container>
     <ng-template #secondary>
-      <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_secondary.svg" width="24"/>
+      <ng-container *ngIf="isOutline else notOutline">
+        <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_dark.svg" width="24"/>
+      </ng-container>
+      <ng-template #notOutline>
+        <img alt="flèche DevOne" height="25" ngSrc="/assets/images/arrow_secondary.svg" width="24"/>
+      </ng-template>
     </ng-template>
   </ng-template>
 </button>

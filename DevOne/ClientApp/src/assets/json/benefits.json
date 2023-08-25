@@ -1,0 +1,28 @@
+{
+  "obj": [
+    {
+      "content": "websiteCreationBenefits01Description",
+      "imgAlt": "DevOne étude préalable",
+      "imgHeight": "180",
+      "imgSource": "assets/images/independant_investi.svg",
+      "imgWidth": "180",
+      "title": "websiteCreationBenefits01Title"
+    },
+    {
+      "content": "websiteCreationBenefits02Description",
+      "imgAlt": "DevOne recommandations",
+      "imgHeight": "180",
+      "imgSource": "assets/images/maintenance.svg",
+      "imgWidth": "180",
+      "title": "websiteCreationBenefits02Title"
+    },
+    {
+      "content": "websiteCreationBenefits03Description",
+      "imgAlt": "DevOne mise en application",
+      "imgHeight": "180",
+      "imgSource": "assets/images/assistance.svg",
+      "imgWidth": "180",
+      "title": "websiteCreationBenefits03Title"
+    }
+  ]
+}

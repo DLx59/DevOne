@@ -9,5 +9,5 @@ import {Translate} from "../../../core/utils/translate";
 })
 export class ContactInformationComponent {
 
-  public translate = Translate;
+  protected readonly translate = Translate;
 }

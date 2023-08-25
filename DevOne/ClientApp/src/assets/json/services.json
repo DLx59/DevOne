@@ -3,10 +3,10 @@
     {
       "content": "homeWebsiteCreationText",
       "imgAlt": "DevOne création de site internet, Belgique, Mouscron",
-      "imgHeight": "204",
+      "imgHeight": "256",
       "imgSrc": "assets/images/website_creation.svg",
-      "imgWidth": "204",
-      "priority" : false,
+      "imgWidth": "256",
+      "priority" : true,
       "routerLink": "",
       "title": "homeWebsiteCreation"
     },
@@ -16,16 +16,16 @@
       "imgHeight": "256",
       "imgSrc": "assets/images/redesign_website.svg",
       "imgWidth": "256",
-      "priority" : false,
+      "priority" : true,
       "routerLink": "",
       "title": "homeRedesignWebsite"
     },
     {
       "content": "homePromotionnalMarketingText",
       "imgAlt": "DevOne impression publicitaire multi-support ",
-      "imgHeight": "150",
+      "imgHeight": "256",
       "imgSrc": "assets/images/promotional_marketing.svg",
-      "imgWidth": "254",
+      "imgWidth": "256",
       "priority" : true,
       "routerLink": "",
       "title": "homePromotionnalMarketing"

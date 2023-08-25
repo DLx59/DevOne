@@ -19,7 +19,7 @@ export class ContactFormComponent implements OnInit {
   @Input() isPhoneFormContact: boolean = false;
   public formGroup: FormGroup = new FormGroup<any>({});
   public model: ContactFormModel = new ContactFormModel();
-  public translate = Translate;
+  protected readonly translate = Translate;
   public isSend: boolean = false;
   public isSubmit: boolean = false;
   public isSucess: boolean = false;

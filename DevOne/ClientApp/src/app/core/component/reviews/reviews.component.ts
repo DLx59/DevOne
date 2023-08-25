@@ -13,7 +13,7 @@ import {BreakpointObserver} from "@angular/cdk/layout";
 })
 export class ReviewsComponent implements OnInit {
   public reviews: Array<Reviews> = new Array<Reviews>()
-  public translate = Translate;
+  protected readonly translate = Translate;
   public config: any;
 
   private configDefault: PaginationInstance = {

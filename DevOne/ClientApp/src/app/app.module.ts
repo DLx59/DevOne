@@ -20,7 +20,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatIconModule} from "@angular/material/icon";
 import {MatRippleModule} from "@angular/material/core";
 import {TranslateMenuComponent} from "./core/component/translate-menu/translate-menu.component";
-import {WorkflowComponent} from "./core/component/home-section/workflow/workflow.component";
+import {StepFlowComponent} from "./core/component/home-section/workflow/step-flow.component";
 import {NgxPaginationModule} from "ngx-pagination";
 import {PaginationComponent} from "./core/component/reviews/pagination/pagination/pagination.component";
 import {
@@ -39,7 +39,7 @@ import {
     WebsiteCreationComponent,
     ReviewsComponent,
     TranslateMenuComponent,
-    WorkflowComponent,
+    StepFlowComponent,
     PaginationComponent,
     ServiceBlockDetailsComponent
   ],

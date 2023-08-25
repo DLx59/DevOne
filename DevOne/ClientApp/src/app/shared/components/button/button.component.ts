@@ -11,5 +11,6 @@ export class ButtonComponent {
   @Input() routerLink: string = '';
   @Input() buttonClasses: string = '';
   @Input() isWhiteArrow: boolean = false;
+  @Input() isOutline: boolean = false;
   public isHovered: boolean = false;
 }

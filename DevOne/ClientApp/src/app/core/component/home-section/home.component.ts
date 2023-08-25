@@ -1,5 +1,4 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {GoogleService} from "../../services/google/google.service";
 import {Reviews} from "../../models/reviews";
 import {Translate} from "../../utils/translate";
 import {Utils} from "../../utils/utils";
@@ -17,11 +16,11 @@ export class HomeComponent implements OnInit {
   @Input() satisfiedCompanies: number = 4;
   public hasChar: boolean = false;
   public reviews: Array<Reviews> = [];
-  public translate = Translate;
   public translateDynamic = Translate as any
   public age: string = '';
+  protected readonly translate = Translate;
   protected readonly workflow = workflow;
-  protected readonly Translate = Translate;
+  protected readonly services = services;
 
   public ngOnInit() {
     this.hasChar = this.checkSatisfiedCompaniesNumber();
@@ -43,6 +42,4 @@ export class HomeComponent implements OnInit {
 
     return '';
   }
-
-  protected readonly services = services;
 }

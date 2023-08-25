@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container-fluid custom-padding">
       <a class="navbar-brand" href="#">
-        <ng-container *ngIf="!isContactRoute; else contactRoute">
+        <ng-container *ngIf="!isDarkRoute; else contactRoute">
           <img alt="Logo Devone Webmaster" class="logo-image" height="49"
                ngSrc="assets/images/DevOne_webmaster_logo.svg"
                priority="true" width="67">
@@ -40,7 +40,7 @@
             </a>
             <ul class="dropdown-menu">
               <li class="text-start text-lg-center w-100">
-                <a [translate]="translate.navbarCreateWebsite" class="dropdown-item" href="#"></a>
+                <a [routerLinkActive]="['active']" [routerLink]="'creation-site-internet'" [translate]="translate.navbarCreateWebsite" class="dropdown-item"></a>
               </li>
               <li class="text-start text-lg-center w-100">
                 <a [translate]="translate.navbarRedisignWebsite" class="dropdown-item" href="#"></a>
@@ -60,7 +60,7 @@
           </li>
           <li class="nav-item d-lg-none my-4">
             <div class="d-flex">
-              <button [routerLink]="'contact'" [translate]="translate.navbarAskQuote"
+              <button [routerLink]="'/contact'" [translate]="translate.navbarAskQuote"
                       class="btn btn-secondary custom-button me-auto"></button>
               <app-translate-menu [calledFrom]="'navbar'"></app-translate-menu>
             </div>
@@ -72,7 +72,7 @@
         <div class="m-auto">
           <app-translate-menu [calledFrom]="'navbar'"></app-translate-menu>
         </div>
-        <button [routerLink]="'contact'" [translate]="translate.navbarAskQuote" class="btn btn-secondary"></button>
+        <button [routerLink]="'/contact'" [translate]="translate.navbarAskQuote" class="btn btn-secondary"></button>
       </div>
     </div>
   </nav>

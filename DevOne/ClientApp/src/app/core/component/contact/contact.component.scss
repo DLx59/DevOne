@@ -1,45 +1,5 @@
 @import "../../../../styles/variables";
 
-.navbar-component {
-  &.contact {
-    @include media-breakpoint-up(lg) {
-      .nav-item {
-        a {
-          color: $light !important;
-
-          svg {
-            path {
-              fill: white !important;
-            }
-          }
-        }
-      }
-
-      .dropdown-menu {
-        .dropdown-item {
-          color: $dark-grey !important;
-        }
-      }
-
-      .translate-menu-component {
-        a, .mat-icon {
-          color: $light !important;
-        }
-
-        .select-button {
-          &:hover {
-            a, .mat-icon {
-              color: rgba(252, 252, 252, 0.82) !important;
-            }
-
-            background-color: rgba(255, 255, 255, 0.35) !important;
-          }
-        }
-      }
-    }
-  }
-}
-
 .contact-component {
   position: relative;
   background-color: $primary;

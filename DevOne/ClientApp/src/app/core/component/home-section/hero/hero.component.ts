@@ -8,5 +8,5 @@ import {Translate} from "../../../utils/translate";
   encapsulation: ViewEncapsulation.None
 })
 export class HeroComponent {
-  public translate = Translate;
+  protected readonly translate = Translate;
 }

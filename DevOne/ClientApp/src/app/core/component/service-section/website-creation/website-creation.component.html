@@ -1,1 +1,114 @@
-<p>website-creation works!</p>
+<div class="website-creation-component">
+  <div class="website-creation-background">
+    <div class="custom-container website-creation-hero">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="d-flex">
+            <div class="m-auto">
+              <h1 [translate]="translate.websiteCreationDevelopActivity"></h1>
+              <app-button [buttonClasses]="'btn btn-outline-light mt-3'"
+                          [buttonName]="translate.contactMe"
+                          [isOutline]="true"
+                          [isWhiteArrow]="true"
+                          [routerLink]="'/contact'"></app-button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="d-flex">
+            <div class="m-auto">
+              <img alt="" class="img-fluid" height="559" ngSrc="assets/images/develop_activity_with_devone.svg"
+                   priority="true"
+                   width="559">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white">
+    <div class="custom-container">
+      <div class="row py-5">
+        <div class="col-8 offset-2 text-center">
+          <h2 [translate]="translate.websiteCreationShineTitle"></h2>
+          <p [translate]="translate.websiteCreationShineDescription" class="text-grey"></p>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div class="col-lg-5">
+          <h3>{{translate.websiteCreationShowcaseTitle01 | translate}}
+            <span class="text-secondary">{{translate.websiteCreationShowcaseTitle02 | translate}}</span>
+            <span *ngIf="currentLang == 'en'">{{translate.websiteCreationShowcaseTitle03 | translate}}</span>
+          </h3>
+          <p [translate]="translate.websiteCreationShowcaseDescription" class="text-grey description mt-4"></p>
+        </div>
+        <div class="col-lg-5 offset-lg-1 mt-lg-0 mt-5">
+          <div class="d-flex h-100">
+            <img alt="" class="img-fluid m-auto" height="449" ngSrc="assets/images/devone_showcase.svg"
+                 priority="true" width="618">
+          </div>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div class="col-lg-5 order-lg-first order-last mt-lg-0 mt-5">
+          <div class="d-flex h-100">
+            <img alt="" class="img-fluid m-auto" height="449" ngSrc="assets/images/devone_site_catalogue.svg"
+                 priority="true" width="618">
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1 order-lg-last order-first">
+          <h3 [translate]="translate.websiteCreationCatalogTitle"></h3>
+          <p [translate]="translate.websiteCreationCatalogDescription" class="text-grey description mt-4"></p>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div class="col-lg-5">
+          <h3>{{translate.websiteCreationECommerceTitle01 | translate}}
+            <span class="text-secondary">{{translate.websiteCreationECommerceTitle02 | translate}}</span>
+          </h3>
+          <p [translate]="translate.websiteCreationECommerceDescription" class="text-grey description mt-4"></p>
+        </div>
+        <div class="col-lg-5 offset-lg-1 mt-lg-0 mt-5">
+          <div class="d-flex h-100">
+            <img alt="" class="img-fluid m-auto" height="449" ngSrc="assets/images/devone_e-commerce.svg"
+                 priority="true" width="618">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-container mt-6">
+      <h2 [translate]="translate.websiteCreationBenefitsTitle" class="text-center"></h2>
+      <div class="row">
+        <ng-container *ngFor="let obj of benefit.obj">
+          <div class="col-lg-4">
+            <app-stepflow [content]="translateDynamic[obj.content]"
+                          [imgAlt]="obj.imgAlt"
+                          [imgHeight]="obj.imgHeight"
+                          [imgSource]="obj.imgSource"
+                          [imgWidth]="obj.imgWidth"
+                          [title]="translateDynamic[obj.title]">
+
+            </app-stepflow>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="custom-container mt-lg-6 mt-5">
+      <div class="row mb-lg-6">
+        <div class="col-lg-5">
+          <div class="d-flex h-100">
+            <img alt="DevOne contact" class="img-fluid m-auto" height="441" ngSrc="assets/images/devone_site_internet_contact.svg"
+                 priority="true" width="662">
+          </div>
+        </div>
+        <div class="col-lg-7 px-lg-6 mt-5 mt-lg-auto">
+          <h2 [translate]="translate.websiteCreationTogetherTitle"></h2>
+          <p [translate]="translate.websiteCreationTogetherDescription"></p>
+          <div class="mt-lg-5">
+            <app-contact-form [submitButtonClass]="'btn btn-dark'"></app-contact-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

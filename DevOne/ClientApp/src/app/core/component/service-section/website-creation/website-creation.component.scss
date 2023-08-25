@@ -1,0 +1,31 @@
+@import "../../../../../styles/variables";
+
+.website-creation-component {
+  position: relative;
+  background-color: $primary;
+
+  .website-creation-background {
+    position: relative;
+    background: lightgray url("../../../../../assets/images/devone_creation_de_site_internet_background.svg") center/cover no-repeat;
+    height: 49.75em;
+    width: auto;
+    color: $light;
+
+    .website-creation-hero {
+      & {
+        &,
+        & > .row,
+        & > .row > [class^="col-"],
+        & > .row > [class^="col-"] > div {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  p {
+    &.description {
+      line-height: 199%;
+    }
+  }
+}
